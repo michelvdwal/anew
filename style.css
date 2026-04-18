@@ -244,7 +244,7 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 96px 0;
+  padding: 96px 0 0 0;
 }
 
 /* Background div — JS updates transform: scale() on scroll */
@@ -255,7 +255,7 @@ a {
   background-size: cover;
   background-position: center bottom;
   transform-origin: center bottom;
-  transform: scale(2); /* initial; script.js reduces to scale(1) */
+  transform: scale(1.5); /* initial; script.js reduces to scale(1) */
   will-change: transform;
 }
 

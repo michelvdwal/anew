@@ -1,6 +1,27 @@
 "use strict";
 
 /* ─────────────────────────────────────────────────────
+   Hero background — random image on each page load
+   Desktop images only (no _m suffix).
+   ───────────────────────────────────────────────────── */
+(function heroRandomBg() {
+  if (window.innerWidth <= 1024) return; // mobile uses its own image via CSS
+
+  const images = [
+    "assets/anew-summer.jpg",
+    "assets/anew-winter.jpg",
+    "assets/anew-white-house.jpg",
+    "assets/anew-boardroom.webp",
+    "assets/anew-brainstorm.webp",
+    "assets/anew-business-district.webp",
+  ];
+
+  const pick = images[Math.floor(Math.random() * images.length)];
+  const heroBg = document.querySelector(".s-hero__bg");
+  if (heroBg) heroBg.style.backgroundImage = `url('${pick}')`;
+})();
+
+/* ─────────────────────────────────────────────────────
    Nav colour mode
    Switches to .nav--dark when the nav's bottom edge is
    over a light-background section (about, quote-left,
@@ -62,7 +83,7 @@
     const scrollY = window.scrollY;
     const heroH = window.innerHeight * 0.9; // 90 vh in px
     const progress = Math.min(Math.max(scrollY / heroH, 0), 1);
-    const maxScale = window.innerWidth <= 1024 ? 1.2 : 2; // smaller zoom on mobile
+    const maxScale = window.innerWidth <= 1024 ? 1.2 : 1.5; // smaller zoom on mobile
     const scale = maxScale - progress * (maxScale - 1); // maxScale → 1.0
 
     heroBg.style.transform = `scale(${scale})`;
