@@ -10,7 +10,6 @@
   const images = [
     "assets/anew-summer.jpg",
     "assets/anew-winter.jpg",
-    "assets/anew-white-house.jpg",
     "assets/anew-boardroom.webp",
     "assets/anew-brainstorm.webp",
     "assets/anew-business-district.webp",
