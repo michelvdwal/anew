@@ -243,7 +243,7 @@ a {
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 96px 0 0 0;
+  padding: 48px 0;
 }
 
 /* Background div — JS updates transform: scale() on scroll */
