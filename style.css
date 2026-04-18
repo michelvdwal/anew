@@ -254,7 +254,7 @@ a {
   background-size: cover;
   background-position: center 85%;
   transform-origin: center 85%;
-  transform: scale(1.5); /* initial; script.js reduces to scale(1) */
+  transform: scale(1.75); /* initial; script.js reduces to scale(1) */
   will-change: transform;
 }
 
@@ -908,6 +908,9 @@ a {
   }
   .s-hero__bg {
     background-image: url("assets/anew-business-district_m.webp");
+    background-position: center 100%;
+    transform-origin: center 100%;
+    transform: scale(1.75);
   }
   .hero__content {
     max-width: 100%;

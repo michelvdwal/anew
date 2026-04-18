@@ -98,7 +98,7 @@
     const scrollY = window.scrollY;
     const heroH = window.innerHeight * 0.9; // 90 vh in px
     const progress = Math.min(Math.max(scrollY / heroH, 0), 1);
-    const maxScale = window.innerWidth <= 1024 ? 1.2 : 1.5; // smaller zoom on mobile
+    const maxScale = 1.75; // initial zoom — matches CSS transform: scale(1.75)
     const scale = maxScale - progress * (maxScale - 1); // maxScale → 1.0
 
     heroBg.style.transform = `scale(${scale})`;
