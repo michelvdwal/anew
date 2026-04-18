@@ -29,9 +29,11 @@
     ? 'assets/anew-business-district_m.webp'
     : 'assets/anew-business-district.webp';
 
-  const pick = localStorage.getItem('anew-hero-seen')
+  const storageKey = isMobile ? 'anew-hero-seen-mobile' : 'anew-hero-seen-desktop';
+
+  const pick = localStorage.getItem(storageKey)
     ? images[Math.floor(Math.random() * images.length)]
-    : (localStorage.setItem('anew-hero-seen', '1'), firstImage);
+    : (localStorage.setItem(storageKey, '1'), firstImage);
   const heroBg = document.querySelector(".s-hero__bg");
   if (heroBg) heroBg.style.backgroundImage = `url('${pick}')`;
 })();
