@@ -203,13 +203,8 @@
       <div class="manifesto-video__overlay"></div>
     </div>
 
-    <!-- ══════════════════════════════════════════════
-       PIN: manifesto stays fixed while Teams slides over
-       Scene height = 100vh manifesto + 100vh slide space
-       ══════════════════════════════════════════════ -->
-    <div class="pin-manifesto">
-      <!-- ── 4 · MANIFESTO (sticky, 100 vh, transparent bg) ── -->
-      <section class="s-manifesto" aria-label="Manifesto">
+    <!-- ── 4 · MANIFESTO (sticky — teams scrolls over) ── -->
+    <section class="s-manifesto" aria-label="Manifesto">
         <div class="s-manifesto__inner">
           <div class="logo-mark logo-mark--lg" aria-hidden="true">
             <img
@@ -247,8 +242,6 @@
           <div class="manifesto-progress__fill"></div>
         </div>
       </section>
-    </div>
-    <!-- /pin-manifesto -->
 
     <!-- ── 5 · TEAMS (slides over manifesto, reveals quote-right bg) -->
     <section class="s-teams" aria-label="Onze teams">
@@ -346,7 +339,7 @@
       </div>
     </section>
 
-    <!-- ── 6 · QUOTE RIGHT (fixed bg — footer pushes up) -->
+    <!-- ── 6 · QUOTE RIGHT (sticky — footer scrolls over) -->
     <section class="s-quote-right" aria-label="Quote Edgar Molenaars">
       <div class="container">
         <div class="quote-right__content">

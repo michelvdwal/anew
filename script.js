@@ -2,20 +2,36 @@
 
 /* ─────────────────────────────────────────────────────
    Hero background — random image on each page load
-   Desktop images only (no _m suffix).
+   Desktop and mobile each have their own image pool.
+   First-ever load always shows the business-district image.
    ───────────────────────────────────────────────────── */
 (function heroRandomBg() {
-  if (window.innerWidth <= 1024) return; // mobile uses its own image via CSS
+  const isMobile = window.innerWidth <= 1024;
 
-  const images = [
-    "assets/anew-summer.jpg",
-    "assets/anew-winter.jpg",
-    "assets/anew-boardroom.webp",
-    "assets/anew-brainstorm.webp",
-    "assets/anew-business-district.webp",
+  const desktopImages = [
+    'assets/anew-summer.webp',
+    'assets/anew-winter.webp',
+    'assets/anew-boardroom.webp',
+    'assets/anew-brainstorm.webp',
+    'assets/anew-business-district.webp',
   ];
 
-  const pick = images[Math.floor(Math.random() * images.length)];
+  const mobileImages = [
+    'assets/anew-summer_m.webp',
+    'assets/anew-winter_m.webp',
+    'assets/anew-boardroom_m.webp',
+    'assets/anew-brainstorm_m.webp',
+    'assets/anew-business-district_m.webp',
+  ];
+
+  const images = isMobile ? mobileImages : desktopImages;
+  const firstImage = isMobile
+    ? 'assets/anew-business-district_m.webp'
+    : 'assets/anew-business-district.webp';
+
+  const pick = localStorage.getItem('anew-hero-seen')
+    ? images[Math.floor(Math.random() * images.length)]
+    : (localStorage.setItem('anew-hero-seen', '1'), firstImage);
   const heroBg = document.querySelector(".s-hero__bg");
   if (heroBg) heroBg.style.backgroundImage = `url('${pick}')`;
 })();
@@ -104,15 +120,15 @@
 /* ─────────────────────────────────────────────────────
    Manifesto video — show/play on viewport enter, hide/pause on exit.
    Hidden by default so the fixed hero is visible on page load.
-   The IntersectionObserver on pin-manifesto drives both visibility
-   and playback: the video only appears when the manifesto area is
+   The IntersectionObserver on s-manifesto drives both visibility
+   and playback: the video only appears when the manifesto section is
    actually in the viewport.
    ───────────────────────────────────────────────────── */
 (function manifestoVideo() {
   const videoFixed = document.querySelector(".manifesto-video-fixed");
   const video = document.querySelector(".manifesto-video");
-  const pinManifesto = document.querySelector(".pin-manifesto");
-  if (!video || !videoFixed || !pinManifesto) return;
+  const manifesto = document.querySelector(".s-manifesto");
+  if (!video || !videoFixed || !manifesto) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -131,7 +147,7 @@
     { threshold: 0 }, // fire as soon as any pixel enters / leaves
   );
 
-  observer.observe(pinManifesto);
+  observer.observe(manifesto);
 })();
 
 /* ─────────────────────────────────────────────────────
