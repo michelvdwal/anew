@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anew — Collective of Strategy Teams</title>
+    <link rel="stylesheet" href="https://use.typekit.net/bcg2arz.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ── NAVIGATION (fixed, always on top) ─────────── -->
+    <nav class="nav" aria-label="Hoofdnavigatie">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo" aria-label="Anew – home">
+          <img
+            class="nav__logo-text nav__logo-text--light"
+            src="assets/anew-logo.svg"
+            alt="Anew"
+          />
+          <img
+            class="nav__logo-text nav__logo-text--dark"
+            src="assets/anew-logo-dark.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+        <div class="nav__right">
+          <div class="nav__links">
+            <a href="#" class="nav__link">Ons verhaal</a>
+            <a href="#" class="nav__link">Onze aanpak</a>
+            <a href="#" class="nav__link">Teams</a>
+            <a href="#" class="nav__link">Cases</a>
+            <a href="#" class="nav__link">Contact</a>
+          </div>
+          <div class="nav__lang">
+            <img
+              class="nav__lang-icon"
+              src="assets/icon-globe.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="nav__lang-text"
+              ><span class="active">NL</span> / EN</span
+            >
+          </div>
+        </div>
+
+        <!-- Hamburger — mobile only -->
+        <button
+          class="nav__burger"
+          aria-label="Menu openen"
+          aria-expanded="false"
+        >
+          <span class="nav__burger-line"></span>
+          <span class="nav__burger-line"></span>
+          <span class="nav__burger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ── MOBILE MENU OVERLAY ───────────────────────── -->
+    <div class="nav__mobile-menu" aria-hidden="true">
+      <div class="nav__mobile-inner">
+        <nav class="nav__mobile-links" aria-label="Mobiele navigatie">
+          <a href="#" class="nav__mobile-link">Ons verhaal</a>
+          <a href="#" class="nav__mobile-link">Onze aanpak</a>
+          <a href="#" class="nav__mobile-link">Teams</a>
+          <a href="#" class="nav__mobile-link">Cases</a>
+          <a href="#" class="nav__mobile-link">Contact</a>
+        </nav>
+        <div class="nav__mobile-footer">
+          <div class="nav__lang">
+            <img
+              class="nav__lang-icon"
+              src="assets/icon-globe.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <span class="nav__lang-text"
+              ><span class="active">NL</span> / EN</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 1 · HERO (fixed, 90 vh) ──────────────────── -->
+    <section class="s-hero" aria-label="Hero">
+      <!-- Background — JS scales from 2 → 1, origin: center bottom -->
+      <div class="s-hero__bg" aria-hidden="true"></div>
+      <div class="s-hero__overlay" aria-hidden="true"></div>
+
+      <!-- Hero copy — pushed to bottom-right -->
+      <div class="hero__body">
+        <div class="container">
+          <div class="hero__content">
+            <div class="hero__text">
+              <h1 class="hero__headline">
+                Let's define the playing field anew.
+              </h1>
+              <p class="hero__subtext">
+                Anew is geen bureau. Het is een ander model voor groei en
+                strategie. Wij brengen specialistische teams samen rond complexe
+                groeivraagstukken. Op maat samengesteld.
+              </p>
+            </div>
+            <img
+              class="hero__arrow"
+              src="assets/icon-scroll.svg"
+              alt="Scroll naar beneden"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spacer: holds 90 vh in normal flow so About sits directly below the fixed hero -->
+    <div class="hero-spacer" aria-hidden="true"></div>
+
+    <!-- ── 2 · ABOUT (white — slides over hero) ───── -->
+    <section class="s-about" aria-label="Over Anew">
+      <div class="container">
+        <div class="about__content">
+          <div class="about__text">
+            <h2 class="about__headline">
+              Anew. A Collective of Strategy teams. Een nieuw model voor
+              consulting en groeistrategie.
+            </h2>
+            <p class="about__body">
+              Met Anew, a Collective of Strategy Teams, introduceren
+              <a href="#">Maton Sonnemans</a> en
+              <a href="#">Edgar Molenaars</a> een nieuw model voor consulting en
+              groeistrategie. Niet gebouwd rond één groot bureau. Maar rond
+              gespecialiseerde teams. Teams met een eigen expertise, bewezen
+              ervaring, een eigen overtuiging en een eigen profiel. Teams die
+              zelfstandig sterk zijn, maar ontworpen
+              <a href="#">om samen te werken</a> wanneer het groeivraagstuk
+              daarom vraagt.
+            </p>
+          </div>
+          <a href="#" class="btn" aria-label="Lees ons verhaal">
+            <span class="btn__icon-wrap" aria-hidden="true">
+              <img class="btn__icon" src="assets/icon-button-star.svg" alt="" />
+            </span>
+            <div class="btn__label btn__label--dark">
+              <span class="btn__text btn__text--white">Lees ons verhaal</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3 · QUOTE LEFT (fixed bg, content scrolls over it) -->
+    <section class="s-quote-left" aria-label="Quote Maton Sonnemans">
+      <div class="container">
+        <div class="quote-left__content">
+          <div class="logo-mark logo-mark--md" aria-hidden="true">
+            <img class="logo-mark__base" src="assets/icon-anew.svg" alt="" />
+          </div>
+
+          <blockquote class="quote-text">
+            "We werken met opdrachtgevers en partners die beweging willen, niet
+            bevestiging. In het spanningsveld tussen logica en lef. Niet om
+            gelijk te krijgen, maar om richting te geven."
+          </blockquote>
+
+          <div class="quote-attribution">
+            <p class="quote-name">Maton Sonnemans</p>
+            <div class="quote-team">
+              <img
+                class="icon-arrow icon-arrow--dark"
+                src="assets/icon-arrow-right.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <a href="#" class="quote-team__name">Team Sonnemans</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════
+       FIXED VIDEO BACKDROP for section 4
+       position:fixed at z:1 — visible only through the
+       transparent .s-manifesto. Every other section has
+       a solid background that covers it (z:2+).
+       ══════════════════════════════════════════════ -->
+    <div class="manifesto-video-fixed" aria-hidden="true">
+      <video
+        class="manifesto-video"
+        src="assets/anew-summer-comp.mp4"
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="manifesto-video__overlay"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════
+       PIN: manifesto stays fixed while Teams slides over
+       Scene height = 100vh manifesto + 100vh slide space
+       ══════════════════════════════════════════════ -->
+    <div class="pin-manifesto">
+      <!-- ── 4 · MANIFESTO (sticky, 100 vh, transparent bg) ── -->
+      <section class="s-manifesto" aria-label="Manifesto">
+        <div class="s-manifesto__inner">
+          <div class="logo-mark logo-mark--lg" aria-hidden="true">
+            <img
+              class="logo-mark__overlay"
+              src="assets/icon-anew-outline.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="manifesto__text">
+            <h2 class="manifesto__headline">
+              Niet een nieuwe firma.<br />Een nieuw model.
+            </h2>
+            <p class="manifesto__body">
+              De kwaliteit, denkkracht en boardroom-geloofwaardigheid van
+              ervaren strategische adviseurs, zonder de onnodige lagen.
+              Big4-bagage en betrouwbaarheid, maar met meer beweeglijkheid,
+              directere senior betrokkenheid, meer onafhankelijkheid en meer
+              ruimte voor scherpe keuzes.
+            </p>
+          </div>
+
+          <a href="#" class="btn" aria-label="Bekijk onze aanpak">
+            <span class="btn__icon-wrap" aria-hidden="true">
+              <img class="btn__icon" src="assets/icon-button-star.svg" alt="" />
+            </span>
+            <div class="btn__label btn__label--white">
+              <span class="btn__text btn__text--dark">Bekijk onze aanpak</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Scroll-progress indicator — fills while the section is pinned -->
+        <div class="manifesto-progress" aria-hidden="true">
+          <div class="manifesto-progress__fill"></div>
+        </div>
+      </section>
+    </div>
+    <!-- /pin-manifesto -->
+
+    <!-- ── 5 · TEAMS (slides over manifesto, reveals quote-right bg) -->
+    <section class="s-teams" aria-label="Onze teams">
+      <div class="container">
+        <div class="teams__inner">
+          <div class="teams__header">
+            <h2 class="teams__headline">
+              Anew. A Collective of Strategy Teams
+            </h2>
+            <p class="teams__subtext">
+              Anew start met twee teams die inhoudelijk complementair zijn en in
+              organisatiefilosofie dicht bij elkaar liggen.
+            </p>
+          </div>
+
+          <div class="teams__grid">
+            <div class="team-card">
+              <div class="team-card__icon">
+                <img
+                  src="assets/icon-team-sonnemans.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 class="team-card__name">Team Sonnemans</h3>
+              <p class="team-card__desc">
+                Innovation, customer-focused strategy &amp; new business design
+              </p>
+              <div class="team-card__link">
+                <img
+                  class="icon-arrow icon-arrow--white"
+                  src="assets/icon-arrow-right.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <a href="#" class="team-card__link-text"
+                  >Maak kennis met Team Sonnemans</a
+                >
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__icon">
+                <img
+                  src="assets/icon-team-millers.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 class="team-card__name">Team Millers</h3>
+              <p class="team-card__desc">
+                Marketing, CX, branding &amp; marketing operating model for real
+                growth
+              </p>
+              <div class="team-card__link">
+                <img
+                  class="icon-arrow icon-arrow--white"
+                  src="assets/icon-arrow-right.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <a href="#" class="team-card__link-text"
+                  >Maak kennis met Team Millers</a
+                >
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__icon">
+                <img
+                  src="assets/icon-questionmark.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+              <h3 class="team-card__name">Jouw team?</h3>
+              <div class="team-card__link">
+                <img
+                  class="icon-arrow icon-arrow--white"
+                  src="assets/icon-arrow-right.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <a href="#" class="team-card__link-text">Neem contact op</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6 · QUOTE RIGHT (fixed bg — footer pushes up) -->
+    <section class="s-quote-right" aria-label="Quote Edgar Molenaars">
+      <div class="container">
+        <div class="quote-right__content">
+          <div class="logo-mark logo-mark--md" aria-hidden="true">
+            <img class="logo-mark__base" src="assets/icon-anew.svg" alt="" />
+          </div>
+
+          <blockquote class="quote-text">
+            "Anew bestaat voor leiders die begrijpen dat groei niet komt van
+            meer van hetzelfde doen, maar van anders durven denken."
+          </blockquote>
+
+          <div class="quote-attribution">
+            <p class="quote-name">Edgar Molenaars</p>
+            <div class="quote-team">
+              <img
+                class="icon-arrow icon-arrow--dark"
+                src="assets/icon-arrow-right.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <a href="#" class="quote-team__name">Team Millers</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOOTER (pushes quote-right section up) ─── -->
+    <footer class="s-footer" aria-label="Footer">
+      <div class="footer__inner">
+        <div class="footer__logo" aria-label="Anew">
+          <img src="assets/icon-anew-white.svg" alt="Anew" />
+        </div>
+
+        <nav class="footer__links" aria-label="Footer navigatie">
+          <div class="footer__col">
+            <div class="footer__col-item">
+              <img
+                src="assets/icon-linkedin.svg"
+                alt="LinkedIn"
+                width="14"
+                height="16"
+              />
+              <a href="#" class="footer__col-link">/in/anew</a>
+            </div>
+            <div class="footer__col-item">
+              <img
+                src="assets/icon-privacy.svg"
+                alt=""
+                aria-hidden="true"
+                width="14"
+                height="16"
+              />
+              <a href="#" class="footer__col-link">Privacy statement</a>
+            </div>
+            <div class="footer__col-item">
+              <img
+                src="assets/icon-cookies.svg"
+                alt=""
+                aria-hidden="true"
+                width="16"
+                height="16"
+              />
+              <a href="#" class="footer__col-link">Cookies</a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <a href="#" class="footer__col-link">Ons verhaal</a>
+            <a href="#" class="footer__col-link">Onze aanpak</a>
+            <a href="#" class="footer__col-link">Teams</a>
+            <a href="#" class="footer__col-link">Cases</a>
+            <a href="#" class="footer__col-link">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
