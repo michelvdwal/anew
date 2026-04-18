@@ -972,6 +972,7 @@ a {
 
   /* ── Manifesto ─────────────────────────────────── */
   .s-manifesto {
+    position: relative;
     height: auto;
   }
   .manifesto__headline {
